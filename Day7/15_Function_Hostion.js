@@ -11,3 +11,7 @@ const withVariable = function (num2) {
     return num2 + 2
 
 }
+const name = () => {
+
+}
+name();
