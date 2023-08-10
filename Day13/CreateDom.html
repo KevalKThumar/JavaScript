@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>
+ *{
+    margin: 0;
+ }
+</style>
+<body style="background-color: #121212; color: #ffffff;">
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div> -->
+    
+</body>
+<!-- <script src="CreateDom.js"></script> -->
+<script>
+    const div = document.createElement("div")
+    console.log(div)
+    div.setAttribute("id",Math.round(Math.random()*10+1))
+    div.setAttribute("class","main")
+    //1) div.innerText = "Hello This is add By JavaScript"
+    const textNode = document.createTextNode('Hello This is added By JavaScrip')
+    div.appendChild(textNode)
+    div.style.backgroundColor = "green"
+    div.style.display = "inline-block"
+    div.style.padding = "12px"
+    div.style.borderRadius = "12px"
+    div.style.border = "2px solid black"
+    document.body.appendChild(div)
+
+
+    
+
+
+</script>
+</html>

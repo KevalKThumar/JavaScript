@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+      .bg-black{
+        background-color: #121212;
+        color: #ffffff;
+      }
+    </style>
+</head>
+<body class="bg-black">
+    <div id="keval">
+        <h1>DOM Learning in chai aur code</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    </div>
+    <ul>
+      <li>one</li>
+      <li>tow</li>
+      <li>three</li>
+      <li>four</li>
+    </ul>
+    
+</body>
+</html>
+
+<!-- 
+The DOM stands for Document Object Model. In the context of JavaScript, the DOM is a programming interface that represents the structure of a web page or an XML document as a tree-like structure of objects. It provides a way for scripts to interact with and manipulate the content, structure, and style of a web document.
+DOM is the Document Object Model of HTML document.
+It represents the logical structure of the document and enables JavaScript to access and manipulate the contents of the document.
+It represents the logical structure of the document and enables programs to change its contents.
+The following terms will help you understand this concept better:-
+
+1) Document: Represents the entire web page or XML document.
+2) Element: Represents individual HTML or XML elements on the page, such as <div>, <p>, <h1>, etc.
+3) Node: The basic unit in the DOM, representing any individual part of the document, whether it's an 
+         element, attribute, or text content.
+4) Attribute: Represents attributes of an element, like class, id, src, etc.
+5) Text Node: Represents the text content within an element.
+6) Parent and Child Nodes: Elements in the DOM are arranged in a hierarchical structure, where elements 
+                           can be parents (containing child elements) or children (nested inside parent 
+                           elements).
+
+
+const item = Document.getElementById("keval")
+item has total three property for show the text in side the selected id 
+ 1)innerText = It will show that string that is display in webpage backgroung text 
+               does not show
+ 2)textContent = It will show all the content that are in selected id 
+ 3)innerHTML = It will give as a full inner HTML value as a string 
+
+
+  ******************************QuerySelectorInDom******************************
+
+   For the selection of the element is same as the CSS selector 
+     for id =>#keval
+     for class =>.keval
+     for tag => h1,h2,p,img etc....
+     for input => input[type="password"]
+
+  There were main to type of collection which is given by a selector query:-
+  1)HTMLCollection: getElementById,getElementByClass
+  2)NodeCollection: querySelector(Select only first element),querySelectorAll
+
+  HTMLCollection:
+         1) it does not have ayn kind of looping function. for the use of loop we are convert HTMLCollection to array by writting this:
+         Array.from(name); 
+   NodeCollection: 
+        -> it has only one loop that is forEach for      
+ -->
+
