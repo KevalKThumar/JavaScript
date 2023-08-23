@@ -16,3 +16,58 @@ for (const a in array) {
   }
 }
 ```
+# Que:-2 Implement a custom forEach in javascript?
+###  There are main two way to implement this in js
+##    1) using function // starting of js
+###    2) using Prototype
+####       i) fresher level code implementation 
+####      ii) SD2,SD3 level code implementation 
+
+# Ans 1
+```javaScript
+const customForEachOne = function (array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i])
+    }
+}
+
+```
+# Ans 2(i)
+```javaScript
+Array.prototype.customForEachTwo = function (callBack) {
+    for (let i = 0; i < this.length; i++) {
+        if (this.hasOwnProperty(i)) {
+            callBack(this[i], i, this)
+        }
+    }
+}
+
+arr.customForEachTwo((a, i, arr) => {
+    console.log(a)
+    console.log(i)
+})
+
+```
+# Ans 2(ii)
+```javaScript
+const forEachFunction = (callBack, thisContext) => {
+    if (typeof (callBack) !== "function") {
+        throw `CallBack Not Found!`
+    }
+    let length = this.length
+    for (let i = 0; i < length; i++) {
+        if (this.hasOwnProperty(i)) {
+            callBack.call(thisContext, this[i], i, length, this)
+        }
+    }
+}
+
+Array.prototype.customForEachThree = forEachFunction()
+
+arr.customForEachThree((a, i, arr, length) => {
+    console.log(a)
+    console.log(i)
+
+}, this)
+
+```
