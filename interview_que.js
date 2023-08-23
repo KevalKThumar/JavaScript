@@ -52,8 +52,8 @@ arr.customForEachTwo((a, i, arr) => {
 
 Array.prototype.customForEachThree = "keval"
 
-const forEachFunction = (callBack, thisContext) => {
-    if (typeof (callBack) !== "function") {
+const forEachFunction = function (callBack, thisContext) {
+    if (typeof callBack !== 'function') {
         throw `CallBack Not Found!`
     }
     let length = this.length
@@ -64,7 +64,7 @@ const forEachFunction = (callBack, thisContext) => {
     }
 }
 
-Array.prototype.customForEachThree = forEachFunction()
+Array.prototype.customForEachThree = forEachFunction
 
 arr.customForEachThree((a, i, arr, length) => {
     console.log(a)
