@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            type="Image"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            type="Image"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="japan"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            type="Image"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="river"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            type="Image"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="owl"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            type="Image"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="prayer"
+          />
+        </li>
+        <li>
+          <a
+            style="color: aliceblue"
+            type="link"
+            href="https://google.com"
+            id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //  sysntex is =>> <element>.addEventListener(<eventName>, <callbackFunction>, {capture : boolean});
+    // {capture: boolean}: It tells whether the event will be in the capture phase or in the bubbling phase (optional)
+
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    // There are three type of event
+    /*
+    1)onclick="alert('owl:-1')" ==> in HTML tag
+    2) document.getElementById('owl').onclick = function(){
+         alert("Owl is clicked");
+       }
+  */
+
+    //  document.getElementById('owl').addEventListener('click',(event)=>{
+    //   alert("Owl is clicked");
+    //   event.stopPropagation()  // it help to us stop defult bubbling in eventListener
+    //   console.log(event);
+    //  })
+    //  document.getElementById('images').addEventListener('click',(event)=>{
+    //   alert("images is clicked");
+    //   console.log(event);
+    //  })
+    document.getElementById("google").addEventListener("click", (event) => {
+      event.preventDefault();
+    });
+
+    //  Event propogation or bubbling in EventListener for javaScript is that one senario is that top element is ul then li and in side the li thare is one image if we target both element ul and image then first it will target image because it is a inside of the element and it is a child of ul element it is a example of Event propogation or bubbling when it is in bubbling phase it third perameter of the addEventListener
+
+    /***************************** Remove Image When It Click *****************************/
+
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        const removeElement = e.target.parentNode;
+       
+
+        //  console.log(removeElement)
+        if (e.target.tagName === "IMG") {
+          removeElement.remove();
+        }
+      },
+      false
+    );
+  </script>
+</html>

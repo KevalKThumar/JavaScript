@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #5B84B1FF;
+  }
+
+  .card {
+    background-color: #5B84B1FF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-pic {
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    border-color: #5B84B1FF;
+    filter: blur(0.5);
+    border-radius: 50%;
+    object-fit: cover;  
+    margin-bottom: 10px;
+  }
+
+  .button {
+    background-color:#FC766AFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+    </style>
+</head>
+<body style="background-color: #FC766AFF; color: #fff;">
+    <div class="card">
+    <img class="profile-pic" src="" >
+    <h2 id="name">Your Name</h2>
+    <p id="bio" style="max-height: 400px;">Bio</p>
+    <p id="Followers">Followers</p>
+
+    <button class="button">Get info</button>
+  </div>
+</body>
+<script>
+
+
+    const requestURL = "https://api.github.com/users/hiteshchoudhary"
+    const photo = document.querySelector(".profile-pic")
+    const name = document.getElementById('name')
+    const bio = document.getElementById('bio')
+    const Followers = document.getElementById('Followers')
+    const button = document.querySelector('.button') 
+
+    
+    const xmlHttpRequest = new XMLHttpRequest()
+    xmlHttpRequest.open("GET",requestURL)
+     
+    button.addEventListener("click",function(){
+    if (button.innerHTML === "Get info") {
+       
+
+        xmlHttpRequest.onreadystatechange = function(){
+            console.log(xmlHttpRequest.readyState)
+            if (xmlHttpRequest.readyState === 4) {
+                console.log(this.responseText)
+                let data = JSON.parse(this.response);
+                // data.followers
+                photo.src = data.avatar_url
+                name.innerHTML=data.login
+                Followers.innerText= data.followers
+                bio.innerHTML = data.bio  
+                button.innerHTML = "Reset" 
+                
+        }
+        }
+
+        xmlHttpRequest.send()
+    }
+    else
+    {
+        photo.src = ""
+        name.innerHTML = "Your Name"
+        Followers.innerText ="Followers"
+        bio.innerHTML = "Bio"
+        button.innerHTML = 'Get info'
+    }
+})
+    
+</script>
+</html>

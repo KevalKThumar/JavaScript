@@ -2,5 +2,9 @@
     "console-ninja.output.showLogsOnlyFromOpenedFiles": true,
     "console-ninja.output.showLogsFromMultipleRunningToolsTogether": true,
     "console-ninja.output.showLogsFromLogPointsOnly": true,
-    "console-ninja.captureFunctions": true
+    "console-ninja.captureFunctions": true,
+    "cSpell.words": [
+        "Keval",
+        "Thumar"
+    ]
 }

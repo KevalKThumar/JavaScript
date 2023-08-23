@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEVEL</title>
+</head>
+<body>
+    <h1>
+        Hello Keval Thumar
+    </h1>
+    <Button id="start">start</Button>
+    <Button id="stop">stop</Button>
+    
+</body>
+
+<script>
+
+    const name = document.querySelector('h1')
+    const button = document.querySelector('#stop')
+    const button2 = document.querySelector('#start')
+    
+    // const changeName = ()=>{
+    //     //  It will run after 1s of browser start
+    // //  console.log("keval thumar")
+    // name.innerHTML = `Best JavaScript Series of YouTube`
+    // }
+    // const changeMe = setTimeout(changeName,4000)
+    
+    // button.addEventListener('click',function(){
+    //     clearTimeout(changeMe)
+    // })
+
+    // button2.addEventListener('click',()=>{
+    //    setTimeout(changeName,4000)
+    // })
+
+     const changeName = ()=>{
+        console.log(parseInt(Math.random()*10 + 1))
+     }
+     let changeMe = setInterval(changeName,2000)
+     
+
+     button.addEventListener('click',()=>{
+        clearInterval(changeMe);
+        console.log('setInterval stopped' )
+     })
+     button2.addEventListener('click',()=>{
+        changeMe = setInterval(changeName,2000)
+        console.log('setInterval start' )
+     })
+</script>
+</html>
