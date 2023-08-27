@@ -1,7 +1,7 @@
 let myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // myNums = myNums.map((nums) => {
-//     return nums + 10;
+//      return nums + 10;
 // })
 // console.log(myNums)
 
@@ -9,7 +9,7 @@ let myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // myNums.forEach((nums) => {
 //     myNewNums.push(nums)
 // })
-// console.log(myNewNums)
+// console.log("",myNewNums)
 
 // const myNewNums = myNums
 //     .map((nums) => nums + 10)   //Compleate this for full array after this it wiil pass to the second map

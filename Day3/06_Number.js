@@ -12,7 +12,7 @@ const hundreds = 1000000000000;
 // console.log(Number.MAX_VALUE)
 
 
-// ************************************ Maths *****************************
+// *************************  Maths *****************************
 
 /**
  * Generate Random Number with Math.Random() it will give us value in range of 0 to 1.

@@ -12,7 +12,7 @@ for (const greet of greeting) {
     }
     // console.log(greet)
 }
-// Map:-The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.it is store at one time if it is set multipal time
+// Map:- The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.it is store at one time if it is set multipal time
 
 // Map if itretable in forof loop and Object is not itretable in forof loop
 

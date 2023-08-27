@@ -3,7 +3,7 @@ const months = 3
 switch (months) {
     case 3:
 
-        break; //if you dont write break then it will execute all the dowen ase of 
+        break; //if you dont  write break then it will execute all the dowen ase of 
 
     default:
         break;

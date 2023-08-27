@@ -7,7 +7,7 @@ const user = {
         console.log(this) // In this line 'this' is reffers to the current context that is user object. 
     }
 }
-console.log(this) // In this line 'this' is reffers to the Globle context of the Node that is user object. OUTPUT = {} 
+console.log(this) //  In this line 'this' is reffers to the Globle context of the Node that is user object. OUTPUT = {} 
 user.welcomeMessage()
 
 /**

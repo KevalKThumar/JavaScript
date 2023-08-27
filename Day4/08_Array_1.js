@@ -31,5 +31,6 @@ myArray.pop()
 myArray.unshift(3) // = > Just Like push
 myArray.shift() // = > Just Like pop
 
-console.log(myArray)
+console.log("array is:-", myArray)
+
 

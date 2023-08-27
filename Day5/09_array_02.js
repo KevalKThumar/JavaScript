@@ -25,4 +25,4 @@ const a = 100;
 const b = 200;
 const c = 300;
 
-console.log(Array.of(a, b, c))
+console.log("my Array is:-", Array.of(a, b, c))

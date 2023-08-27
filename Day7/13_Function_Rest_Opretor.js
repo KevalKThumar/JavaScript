@@ -1,10 +1,10 @@
 
-// With out use of REST Opretor 
+// With out use of REST Opretor
 // function addAllCartItemsPrice(items) {
 //     return items
 // }
 // If you resived number of items which is you don't know then you are stuck in that condition that you are passing more then one perameter and you are resived only one argument the you use REST opretor
-// REST Opretor simply return an array of what ever you pass
+// REST Opretor simply return an array of what ever you pass......
 function addAllCartItemsPrice(...items) {
     return items
 }

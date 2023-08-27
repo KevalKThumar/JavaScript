@@ -1,4 +1,4 @@
-// when you are checking scop in brouser in that yor globle scope is different then you node
+// when you are checking  scop in brouser in that yor globle scope is different then you node 
 
 // let letVariable = 10;
 // const constVariable = 20;

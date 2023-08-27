@@ -2,7 +2,7 @@
 // const repoCount = 7
 // console.log(name + repoCount + " Value")  OutDated
 
-// ***************** New Method :- String Intropoletion ********************
+// ******* New Method :- String Intropoletion **********
 
 const name = "keval"
 console.log(`Hello ${name}, How are you!!`)

@@ -5,7 +5,7 @@ function withOutVariable(num1) {
 
 }
 
-withVariable(6)  //Cannot access 'withVariable' before initialization It call Hosting
+withVariable(6)  //Cannot access  'withVariable' before initialization It call Hosting
 const withVariable = function (num2) {
 
     return num2 + 2

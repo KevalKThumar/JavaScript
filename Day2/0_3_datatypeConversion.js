@@ -5,7 +5,7 @@
 //  let score = true  =>>> convert ans 1 false 0
 
 // console.log(typeof score);
-// console.log(typeof (score));
+// console.log(typeof (score)); 
 
 // If you went to change data type in JavaScript 
 

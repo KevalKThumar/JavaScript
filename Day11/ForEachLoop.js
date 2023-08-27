@@ -3,7 +3,7 @@ const coding = ["javascript", "cpp", "python", "c", "dart", "swift"]
 
 const values = coding.forEach((element) => {
     // console.log(element)
-    return element // It is does not work in this tpye of return
+    return element //  It is does not work in this tpye of return
 });
 
 // console.log(values) 

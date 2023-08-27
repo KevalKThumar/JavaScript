@@ -1,4 +1,4 @@
-// Immediately Invoked Function Expressions (IIFI)
+// Immediately  Invoked Function Expressions (IIFI)
 
 // We are use iifi for the remove global scope variable bcz that is creating a problam sometime for the immediately function execution
 // sysntex: (function defination)<<--keval (finction name)

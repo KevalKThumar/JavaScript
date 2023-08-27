@@ -22,7 +22,7 @@ const object = {
 // Object.freeze(object)
 
 object.greeting = () => {
-    console.log("Hello Js")
+    console.log("Hello Js ")
 }
 console.log(object.greeting())
 console.log(object.greeting)

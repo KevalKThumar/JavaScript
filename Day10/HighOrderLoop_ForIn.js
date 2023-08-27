@@ -1,5 +1,5 @@
 // In forof Loop it wiil directly gives as a value of the map ,array,string etc..
-// In forin Loop it wiil not gives as directly value it will gives as a key of the value.
+//  In forin Loop it wiil not gives as directly value it will gives as a key of the value.
 
 const user = {
     firstname: 'Thumar',

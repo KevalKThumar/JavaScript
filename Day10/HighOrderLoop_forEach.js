@@ -1,7 +1,7 @@
 const coding = ["javascript", "cpp", "python", "c", "dart", "swift"]
 
 coding.forEach(function (language) {
-    // console.log("I love to code in " + language)
+    // console.log("I love to code in  " + language)
 })
 const name = (language, index, coding) => {
     // console.log(language, index, coding)

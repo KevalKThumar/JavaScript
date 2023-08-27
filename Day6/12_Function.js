@@ -11,7 +11,7 @@
 
 function greetMe(userName) {
     if (!userName) {
-        console.log("Please Enter a name:::")
+        console.log("Please Enter a name:-")
         return
     }
     return `Hello , ${userName}`
