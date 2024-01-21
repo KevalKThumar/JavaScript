@@ -10,7 +10,7 @@ function type() {
     if (charCount < words[wordCount].length) {
         typedTextSpan.textContent += words[wordCount].charAt(charCount)
         charCount++;
-        setTimeout(type, 300); // ek char erase thava no time
+        setTimeout(type, 100); // ek char erase thava no time
     }
     else{
         isTypedWord = false
@@ -23,7 +23,7 @@ function erase() {
     {
         typedTextSpan.textContent = words[wordCount].substring(0, charCount - 1);
         charCount--;
-        setTimeout(erase, 250);
+        setTimeout(erase, 100);
     }
     else{
         isTypedWord = true
