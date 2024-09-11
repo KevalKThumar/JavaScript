@@ -16,14 +16,21 @@ for (const a in array) {
   }
 }
 ```
+
 # Que:-2 Implement a custom forEach in javascript?
-###  There are main two way to implement this in js
-##    1) using function // starting of js
-###    2) using Prototype
-####       i) fresher level code implementation 
-####      ii) SD2,SD3 level code implementation 
+
+### There are main two way to implement this in js
+
+## 1) using function // starting of js
+
+### 2) using Prototype
+
+#### i) fresher level code implementation
+
+#### ii) SD2,SD3 level code implementation
 
 # Ans 1
+
 ```javaScript
 const customForEachOne = function (array) {
     for (let i = 0; i < array.length; i++) {
@@ -32,7 +39,9 @@ const customForEachOne = function (array) {
 }
 
 ```
+
 # Ans 2(i)
+
 ```javaScript
 Array.prototype.customForEachTwo = function (callBack) {
     for (let i = 0; i < this.length; i++) {
@@ -48,7 +57,9 @@ arr.customForEachTwo((a, i, arr) => {
 })
 
 ```
+
 # Ans 2(ii)
+
 ```javaScript
 const forEachFunction = (callBack, thisContext) => {
     if (typeof (callBack) !== "function") {

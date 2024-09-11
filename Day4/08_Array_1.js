@@ -13,9 +13,9 @@ console.log(typeof myArray)
 const newArray = myArray; /** If you do this it will not assign a copy of myArray in this it will assign orignal array
 because it is a primitive data type and it will store in heap memory*/
 
-// console.log("A", newArray)
-// console.log(newArray.splice(1, 6))
-// console.log("B", newArray)
+console.log("A", newArray)
+console.log("ans::"+newArray.splice(0, 6))
+console.log("B", myArray)
 
 
 /**
@@ -23,13 +23,13 @@ because it is a primitive data type and it will store in heap memory*/
  * In splice :- In this it include range also and it will change orignal array also 
  */
 
-myArray.push(10)
-myArray.push(11)
-myArray.push(12)
-myArray.push(13)
-myArray.pop()
-myArray.unshift(3) // = > Just Like push
-myArray.shift() // = > Just Like pop
+// myArray.push(10)
+// myArray.push(11)
+// myArray.push(12)
+// myArray.push(13)
+// myArray.pop()
+// myArray.unshift(3) // = > Just Like push
+// myArray.shift() // = > Just Like pop
 
 console.log("array is:-", myArray)
 

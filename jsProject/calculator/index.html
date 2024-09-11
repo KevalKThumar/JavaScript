@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .display {
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            height: 1em;
+        }
+        button {
+            width: 72px;
+            height: 50px;
+            margin: 5px;
+            font-size: 1.5em;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <div class="prev-operand"></div>
+                <div class="curr-operand"></div>
+            </div>
+            <h2>Calculator answer <span id="ans"></span></h2>
+            <button class="op" id="ac">AC</button>
+            <button class="op" id="del">DEL</button>
+            <br>
+            <button class="num" id="1">1</button>
+            <button class="num" id="2">2</button>
+            <button class="num" id="3">3</button>
+            <button class="op" id="/">÷</button>
+            <br>
+            <button class="num" id="4">4</button>
+            <button class="num" id="5">5</button>
+            <button class="num" id="6">6</button>
+            <button class="op" id="*">*</button>
+            <br>
+            <button class="num" id="7">7</button>
+            <button class="num" id="8">8</button>
+            <button class="num" id="9">9</button>
+            <button class="op" id="+">+</button>
+            <br>
+            <button class="num" id="0">0</button>
+            <button class="num" id=".">.</button>
+            <button class="op" id="E">=</button>
+            <button class="op" id="-">-</button>
+        </div>
+    </div>
+    <script>
+        var ans = document.getElementById("ans");
+        var curr = document.querySelector(".curr-operand");
+        var prev = document.querySelector(".prev-operand");
+        var btns = document.querySelectorAll("button");
+
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var value = this.getAttribute("id");
+                if (value == "ac") {
+                    curr.textContent = "";
+                    prev.textContent = "";
+                } else if (value == "del") {
+                    curr.textContent = curr.textContent.slice(0, -1);
+                } else if (value == "E") {
+                    try {
+                        curr.textContent = eval(curr.textContent);
+                        ans.textContent = curr.textContent;
+                    } catch {
+                        curr.textContent = "Error";
+                    }
+                } else {
+                    if (["D", "M", "S", "Sub"].includes(value) && curr.textContent === "") {
+                        curr.textContent = "";
+                    } else {
+                        curr.textContent += value;
+                    }
+                }
+                
+            });
+        }
+    </script>
+</body>
+</html>

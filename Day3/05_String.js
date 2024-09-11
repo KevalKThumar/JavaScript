@@ -30,14 +30,17 @@ console.log(`Hello ${nameWithObj}, How are you!!`)
 
 
 
-const subString = nameWithObj.substring(0, 4) /* In this you can insrt only positive number of range*/
-const anotherString = nameWithObj.slice(-5, 4) /** In this it will go to the 4th position and print or add String like throug reverce */
+const subString = nameWithObj.substring(1, 4) /* In this you can insrt only positive number of range*/
+const anotherString = nameWithObj.slice(1) /** In this it will go to the 4th position and print or add String like throug reverce */
 
 /**
  * concept of this is for subString  0  1  2  3  4
  *                                   K  e  v  a  l 
- *                        for slice -5 -4 -3 -2 -1    
- */
+ *                        for slice -5 -4 -3 -2 -1   
+ *   0 1 2 3                                
+ *   A M A N
+ *  -4-3-2 -1
+ */                                  
 
 // console.log(nameWithObj.indexOf('a'))
 console.log(subString, anotherString)
